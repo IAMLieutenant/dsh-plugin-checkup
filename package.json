@@ -50,7 +50,7 @@
     "checkup"
   ],
   "scripts": {
-    "test": "node test/rules.test.js && node test/probe.test.js && node test/web.test.js && node test/scan.test.js && node test/baseline.test.js",
+    "test": "node test/rules.test.js && node test/probe.test.js && node test/web.test.js && node test/scan.test.js && node test/baseline.test.js && node test/client.test.js",
     "demo": "node scripts/demo.mjs"
   }
 }
