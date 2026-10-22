@@ -1,0 +1,56 @@
+{
+  "name": "dsh-plugin-checkup",
+  "version": "0.2.0",
+  "description": "DSH 插件运行时巡检与来源归因。只读列出实际加载的条目、工具与命令，对照组合包声明找出失败、缺失、重复与未声明项，并支持基线对比。零模型调用。",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": {
+      "default": "./src/index.js"
+    },
+    "./client": {
+      "default": "./src/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [],
+      "immediately": true
+    }
+  },
+  "license": "MIT",
+  "author": "IAMLieutenant",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IAMLieutenant/dsh-plugin-checkup.git"
+  },
+  "homepage": "https://github.com/IAMLieutenant/dsh-plugin-checkup#readme",
+  "bugs": {
+    "url": "https://github.com/IAMLieutenant/dsh-plugin-checkup/issues"
+  },
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "plugin",
+    "diagnostics",
+    "compatibility",
+    "checkup"
+  ],
+  "scripts": {
+    "test": "node test/rules.test.js && node test/probe.test.js && node test/web.test.js && node test/scan.test.js && node test/baseline.test.js",
+    "demo": "node scripts/demo.mjs"
+  }
+}

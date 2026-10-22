@@ -1,0 +1,11 @@
+# dsh-plugin-checkup bundle patch: mount the host half in a profile.
+#
+# The loader row below mounts the plugin. Override config from the profile's own
+# cordis.patch.yml by targeting the same row id (last write wins per row).
+#
+# The plugin is read-only: it never writes to the profile, never installs,
+# never enables/disables anything, and never calls a model.
+
+- insert:
+    - id: plugin-checkup
+      name: dsh-plugin-checkup
