@@ -1,6 +1,6 @@
 {
   "name": "dsh-plugin-checkup",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "DSH 插件运行时巡检与来源归因。只读列出实际加载的条目、工具与命令，对照组合包声明找出失败、缺失、重复与未声明项，并支持基线对比。零模型调用。",
   "type": "module",
   "main": "src/index.js",
